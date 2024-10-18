@@ -9,7 +9,7 @@ def get_cats_info(path):
                 cats_info.append(cat)
             return cats_info     
 
-    except (FileNotFoundError, IOError) :
+    except IOError:
             print('File not found or broken!')
 
 cats_info = get_cats_info("task2/cats_info.txt") #test

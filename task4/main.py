@@ -13,6 +13,7 @@ def add_contact(args, contacts):
 
 def change_contact(args, contacts):
     
+    
 
 def main():
     contacts = {}
@@ -27,8 +28,10 @@ def main():
 
         elif command == 'hello':
             print('How can I help you?')
+
         elif command == 'add':
             print(add_contact(args, contacts))
+
         else:
             print('Invalid command.')
 
