@@ -14,7 +14,7 @@ def total_salary(path):
     
     return total, average
 
-total, average = total_salary("E:/go_it/homework_4/goit-algo-hw-04/task1/salary_file.txt") #test
+total, average = total_salary("task1\salary_file.txt") #test
 print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average} ") #test
 #EOF
 
