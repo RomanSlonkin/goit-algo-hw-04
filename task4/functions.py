@@ -38,3 +38,4 @@ def all_numbers(contacts):
         return contacts
     else:
         return 'There is no any contacts!'
+#EOF
