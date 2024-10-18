@@ -27,8 +27,8 @@ def change_contact(args, contacts):
 
 def phone_number(args, contacts):
     name = args
-    if name in contacts.keys():
-        phone = contacts.get(name)
+    if name[0] in contacts.keys():
+        phone = contacts.get(name[0])
         return f'Phone number of {name} is: {phone}'
     else:
         return 'There is no such contact!'
