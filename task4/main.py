@@ -1,30 +1,4 @@
-def parse_input(user_input):
-    cmd, *args = user_input.split()
-    cmd = cmd.strip().lower()
-    return cmd, *args
-
-def add_contact(args, contacts):
-    try:
-        name, phone = args
-        contacts[name] = phone
-        return 'Contact added'
-    except ValueError:
-        return 'Not enough data to add contact!'
-
-def change_contact(args, contacts):
-    name, phone = args
-    try:
-        if name in contacts.keys():
-            contacts[name] = phone
-            return 'Contact changed'
-        else:
-            return 'There is no such contact! Try command add'
-    except ValueError:
-        return 'Not enough data to change contact'
-
-def phone_number(args, contacts):
-    pass
-     
+from functions import add_contact, phone_number, change_contact, parse_input, all_numbers
 
 def main():
     contacts = {}
@@ -44,8 +18,10 @@ def main():
             print(add_contact(args, contacts))
         elif command == 'change':
             print(change_contact(args, contacts))
+        elif command == 'phone':
+            print(phone_number(args,contacts))
         elif command == 'all':
-            print(contacts)
+            print(all_numbers(contacts))
         else:
             print('Invalid command.')
 
