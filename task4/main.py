@@ -12,8 +12,19 @@ def add_contact(args, contacts):
         return 'Not enough data to add contact!'
 
 def change_contact(args, contacts):
-    
-    
+    name, phone = args
+    try:
+        if name in contacts.keys():
+            contacts[name] = phone
+            return 'Contact changed'
+        else:
+            return 'There is no such contact! Try command add'
+    except ValueError:
+        return 'Not enough data to change contact'
+
+def phone_number(args, contacts):
+    pass
+     
 
 def main():
     contacts = {}
@@ -31,7 +42,10 @@ def main():
 
         elif command == 'add':
             print(add_contact(args, contacts))
-
+        elif command == 'change':
+            print(change_contact(args, contacts))
+        elif command == 'all':
+            print(contacts)
         else:
             print('Invalid command.')
 
