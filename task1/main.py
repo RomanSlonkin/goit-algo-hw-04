@@ -10,13 +10,13 @@ def total_salary(path):
             average = float(total/len(salaries))
             return total, average
 
-    except ValueError:
-         print('Not enough data to proceed')
+    except (ValueError, ZeroDivisionError):
+        print('Not enough data to proceed')
 
     except (FileNotFoundError, IOError) :
-            print('File not found or broken!')
+        print('File not found or broken!')
     
 
-total, average = total_salary("task1\salary_file.txt") #test
-print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average} ") #test
+total, average = total_salary("task1/salary_file.txt") #test
+print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}  ") #test
 #EOF
